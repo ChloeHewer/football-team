@@ -1,0 +1,28 @@
+.weatherArticles {
+  background-color: #a2abb4;
+  width: 33vw;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Bristol {
+  background-image: url("../../images/bristol.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.london {
+  background-image: url("../../images/city-of-london.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.Rome {
+  background-image: url("../../images/rome.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.info {
+  background-color: rgba(#ffffff, 0.8);
+  width: 50%;
+  height: auto;
+}
