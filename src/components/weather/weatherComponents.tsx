@@ -26,7 +26,7 @@ class WeatherComponent extends React.Component<IProps, IState> {
           <div>Humidity: {this.props.weather.main.humidity}</div>
           <section>
             <div>Min Temp: {this.props.weather.main.temp_min}</div>
-            <div>Max Temp:{this.props.weather.main.temp_max}</div>
+            <div>Max Temp: {this.props.weather.main.temp_max}</div>
           </section>
         </section>
       </article>

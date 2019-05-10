@@ -8,6 +8,7 @@ import store from "./store";
 import history from "./history";
 import { NavLink } from "react-router-dom";
 import Routes from "./routes";
+import NavBar from "../src/containers/navBar/navBar";
 
 class App extends Component {
   public render() {
@@ -16,18 +17,9 @@ class App extends Component {
         <Router history={history}>
           <div className="App">
             <header className="App-header">
-              <ul>
-                <NavLink to={"/football"}>
-                  <li>FootBall</li>
-                </NavLink>
-                <NavLink to={"/question"}>
-                  <li>Question</li>
-                </NavLink>
-                <NavLink to={"/weather"}>
-                  <li>Weather</li>
-                </NavLink>
-              </ul>
+              <h2>Tech Test</h2>
             </header>
+            <NavBar />
             <main>
               <Routes />
             </main>

@@ -1,0 +1,18 @@
+.navBar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  div {
+    background-color: rgb(197, 105, 0);
+    width: 33.3%;
+    height: 5vh;
+    border: 2px solid black;
+  }
+  li {
+    width: 100%;
+    font-size: 20px;
+  }
+}
