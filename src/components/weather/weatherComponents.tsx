@@ -22,8 +22,8 @@ class WeatherComponent extends React.Component<IProps, IState> {
       <article className={`${styles.weatherArticles} ${backgroundImage}`}>
         <section className={styles.info}>
           <h2>{this.props.weather.name}</h2>
-          <p>Temperature: {this.props.weather.main.temp} </p>
-          <p>Humidity: {this.props.weather.main.humidity}</p>
+          <div>Temperature: {this.props.weather.main.temp} </div>
+          <div>Humidity: {this.props.weather.main.humidity}</div>
           <section>
             <div>Min Temp: {this.props.weather.main.temp_min}</div>
             <div>Max Temp:{this.props.weather.main.temp_max}</div>
