@@ -18,11 +18,23 @@ export interface IState {}
 class PlayerSelect extends React.Component<IOwnProps & IStateProps, IState> {
   public render() {
     return (
-      <section className={styles.footballSection}>
-        {footBallPlayers.map((player, index) => (
-          <FootBallCard player={player} />
-        ))}
-      </section>
+      <React.Fragment>
+        <label>Pick 3 Defenders: </label>
+        <select>
+          {footBallPlayers.map((player, index) => {
+            if (player.position === "Defender") {
+              return <option value={player.id}>{player.name}</option>;
+            }
+          })}
+        </select>
+        <section className={styles.footballSection}>
+          {footBallPlayers.map((player, index) => {
+            if (player.position === "Defender") {
+              return <FootBallCard player={player} />;
+            }
+          })}
+        </section>
+      </React.Fragment>
     );
   }
 }

@@ -1,0 +1,26 @@
+.question {
+  height: 74vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    width: 50%;
+    height: 10%;
+    font-size: 50px;
+  }
+  div {
+    font-size: 50px;
+  }
+  p {
+    font-size: 30px;
+  }
+  button {
+    height: 15%;
+    font-size: 20px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import * as React from "react";
+import styles from "./question.module.scss";
 
 export interface IProps {}
 
@@ -12,13 +13,13 @@ class Question extends React.Component<IProps, IState> {
   public state = { numb1: 0, numb2: 0, guessedCorrect: "" };
   public render() {
     return (
-      <section>
-        <button onClick={this.randomNumb}>generate random numbers</button>
-        <div>
+      <section className={styles.question}>
+        <div className={styles.fontSize}>
           What is {this.state.numb1} + {this.state.numb2}
         </div>
         <input type="number" placeholder="0" onChange={this.onChange} />
         <p>{this.state.guessedCorrect} </p>
+        <button onClick={this.randomNumb}>generate random numbers</button>
       </section>
     );
   }

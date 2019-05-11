@@ -19,7 +19,7 @@ class Routes extends React.Component<IProps, IState> {
         />
         <Route path="/question" component={Question} />
         <Route path="/weather" component={Weather} />
-        <Redirect to="/not-found" />
+        <Redirect to="/weather" />
       </Switch>
     );
   }
