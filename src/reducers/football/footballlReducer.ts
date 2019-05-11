@@ -4,7 +4,7 @@ import { ThunkAction } from "redux-thunk";
 export interface IPlayers {
   id: number;
   name: string;
-  position: string | null;
+  position: string;
   dateOfBirth: string;
   countryOfBirth: string;
   nationality: string;

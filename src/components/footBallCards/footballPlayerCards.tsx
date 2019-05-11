@@ -7,25 +7,28 @@ export interface IProps {
 }
 
 export interface IState {
-  player: IPlayers;
+  player: IPlayers[];
 }
 
 class FootBallCard extends React.Component<IProps, IState> {
   public state = {
-    player: {
-      id: 0,
-      name: "",
-      position: "",
-      dateOfBirth: "",
-      countryOfBirth: "",
-      nationality: "",
-      role: ""
-    }
+    player: [
+      {
+        id: 0,
+        name: "",
+        position: "",
+        dateOfBirth: "",
+        countryOfBirth: "",
+        nationality: "",
+        role: ""
+      }
+    ]
   };
+
   public render() {
     return (
       <React.Fragment>
-        <article className={styles.footballCards}>
+        <article onClick={this.pickPlayers} className={styles.footballCards}>
           <h2>{this.props.player.name}</h2>
           <h3>{this.props.player.position}</h3>
           <section>
@@ -34,14 +37,14 @@ class FootBallCard extends React.Component<IProps, IState> {
             <div>Nationality: {this.props.player.nationality}</div>
           </section>
         </article>
-        {/* <div>{this.state.player.name}</div> */}
       </React.Fragment>
     );
   }
 
-  // private pickPlayers = () => {
-  //   this.setState({ player: this.props.player });
-  // };
+  private pickPlayers = () => {
+    var player = this.state.player.push(this.props.player);
+    console.log(this.state.player);
+  };
 }
 
 export default FootBallCard;

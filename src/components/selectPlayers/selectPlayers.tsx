@@ -19,20 +19,42 @@ class PlayerSelect extends React.Component<IOwnProps & IStateProps, IState> {
   public render() {
     return (
       <React.Fragment>
-        <label>Pick 3 Defenders: </label>
-        <select>
-          {footBallPlayers.map((player, index) => {
-            if (player.position === "Defender") {
-              return <option value={player.id}>{player.name}</option>;
-            }
-          })}
-        </select>
-        <section className={styles.footballSection}>
-          {footBallPlayers.map((player, index) => {
-            if (player.position === "Defender") {
-              return <FootBallCard player={player} />;
-            }
-          })}
+        <section className={styles.choosePlayer}>
+          <label>Pick 3 Defenders: </label>
+          <section className={styles.footballSection}>
+            {footBallPlayers.map((player, index) => {
+              if (player.position === "Defender") {
+                return <FootBallCard player={player} />;
+              }
+            })}
+          </section>
+
+          <label>Pick 3 Attackers: </label>
+          <section className={styles.footballSection}>
+            {footBallPlayers.map((player, index) => {
+              if (player.position === "Attacker") {
+                return <FootBallCard player={player} />;
+              }
+            })}
+          </section>
+
+          <label>Pick 4 Midfielder: </label>
+          <section className={styles.footballSection}>
+            {footBallPlayers.map((player, index) => {
+              if (player.position === "Midfielder") {
+                return <FootBallCard player={player} />;
+              }
+            })}
+          </section>
+
+          <label>Pick 1 Goalkeeper: </label>
+          <section className={styles.footballSection}>
+            {footBallPlayers.map((player, index) => {
+              if (player.position === "Goalkeeper") {
+                return <FootBallCard player={player} />;
+              }
+            })}
+          </section>
         </section>
       </React.Fragment>
     );
